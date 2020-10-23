@@ -21,6 +21,7 @@ $ qmk compile -kb mint60 -km tecokimura
 
 ### ergo42
 ~/qmk_firmware/keyboards/ergo42/keymaps/tecokimura/
+$ qmk flash -kb ergo42 -km tecokimura
 
 ### hhkb
 ~/qmk_firmware/keyboards/hhkb/keymaps/tecokimura/
