@@ -11,11 +11,11 @@
 #define LT_LFN  LT(LY_LFNC, _______) 
 #define LT_RFN  LT(LY_RFNC, _______) 
 
-#define MOUSEKEY_DELAY       1 
-#define MOUSEKEY_MOVE_DELTA  10
-#define MOUSEKEY_INTERVAL    2 
-#define MOUSEKEY_MAX_SPEED   70
-#define MOUSEKEY_TIME_TO_MAX 20
+// #define MOUSEKEY_DELAY       1 
+// #define MOUSEKEY_MOVE_DELTA  10
+// #define MOUSEKEY_INTERVAL    2 
+// #define MOUSEKEY_MAX_SPEED   70
+// #define MOUSEKEY_TIME_TO_MAX 20
 
 #define OSXBSLS A(KC_BSLS)
 #define OSXREDO LSG(KC_Z)
@@ -34,7 +34,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     /* Layer NORMAL JP:
      * ,-----------------------------------------------------------.
-     * |Esc|  1|  2|  3|  4|  5|  6|  7|  8|  9| 10|  -|  =|  ¥|  `|
+     * |Esc|  1|  2|  3|  4|  5|  6|  7|  8|  9|  0|  -|  =|  ¥|  `|
      * |-----------------------------------------------------------|
      * |Tab  |  Q|  W|  E|  R|  T|  Y|  U|  I|  O|  P|  [|  ]|     |
      * |------------------------------------------------------` Ent|
@@ -46,10 +46,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * `-----------------------------------------------------------'
      */
     [LY_NRML] = LAYOUT_jp(
-        KC_ESC,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,   KC_6,    KC_7,    KC_8,    KC_9,   KC_0,    KC_MINS,  KC_EQL,  KC_BSLS, KC_GRAVE,
+        KC_ESC,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,   KC_6,    KC_7,    KC_8,    KC_9,   KC_0,    KC_MINS,  KC_EQL,  KC_INT3, KC_GRAVE,
         LT_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,   KC_Y,    KC_U,    KC_I,    KC_O,   KC_P,    KC_LBRC,  KC_RBRC, // KC_ENT
-        KC_LCTL, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,   KC_H,    KC_J,    KC_K,    KC_L,   KC_SCLN, KC_QUOT,  KC_ENT,  KC_ENT,
-        KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,   KC_N,    KC_M,    KC_COMM, KC_DOT, KC_SLSH, OSXBSLS,  KC_UP,   LT_RFN,
+        KC_LCTL, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,   KC_H,    KC_J,    KC_K,    KC_L,   KC_SCLN, KC_QUOT,  KC_BSLS,  KC_ENT,
+        KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,   KC_N,    KC_M,    KC_COMM, KC_DOT, KC_SLSH, KC_INT1,  KC_UP,   LT_RFN,
         LT_LFN,  KC_LALT, KC_LGUI, IMEOFF, KC_BSPC,      LT_SPC,     KC_ENT,   IMEON,  KC_RALT,KC_RSFT, KC_LEFT,  KC_DOWN, KC_RGHT),
 
 
@@ -113,8 +113,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_ESC,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12, KC_INS, KC_BSPC,
         KC_TAB,  _______, _______, KC_EJCT, _______, KC_TAB,  KC_WH_L, KC_WH_D, KC_WH_U, KC_WH_R, _______, _______, _______,
         KC_LCTL, _______, _______, _______, _______, _______, KC_MS_L, KC_MS_D, KC_MS_U, KC_MS_R, _______, _______, _______, _______,
-        KC_LSFT, _______, _______, KC_CAPS, _______, _______, KC_BTN1, KC_BTN2, KC_BTN3, KC_BTN4, _______, KC_BRID, KC_VOLU, KC_BRIU,
-        _______, _______, _______, _______, _______,       KC_MPLY,    _______, _______, _______, _______, KC_MPRV, KC_VOLD, KC_MNXT),
+        KC_LSFT, _______, _______, _______, _______, _______, KC_BTN1, KC_BTN2, KC_BTN3, KC_BTN4, _______, KC_BRID, KC_VOLU, KC_BRIU,
+        _______, _______, _______, _______, _______,       KC_BTN1,    _______, _______, _______, _______, KC_MPRV, KC_VOLD, KC_MNXT),
 
     /* Layer LY_RFUNC:
      * ,--------------------------------------------------------------.
