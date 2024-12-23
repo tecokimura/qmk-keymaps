@@ -47,3 +47,22 @@ keymaps/の下のフォルダ名です。
 
 QMKのversion更新で多少変わることがあるかもなので確認しましょう。
 
+
+## トラブル
+
+compileコマンドは正常に終わるがflashするとエラーになってしまう。
+
+> Flashing for bootloader: atmel-dfu
+> Bootloader Version: 0x00 (0)
+> Checking memory from 0x0 to 0x6FFF...  Empty.
+> Chip already blank, to force erase use --force.
+> Checking memory from 0x0 to 0x567F...  Empty.
+> 0%                            100%  Programming 0x5680 bytes...
+> [ X  ERROR
+> Memory write error, use debug for more info.
+
+sudo dfu-programmer atmega32u4 erase --force
+を実行することでflashできるようになった
+
+参考：https://qiita.com/not13/items/d2ec93b27bcd4d890dcc
+
