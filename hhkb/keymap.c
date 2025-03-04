@@ -11,12 +11,17 @@
 #define LT_LFN  LT(LY_LFNC, _______) 
 #define LT_RFN  LT(LY_RFNC, _______) 
 
+// for MaC (OS X)
+#define MC_UNDO   G(KC_Z) 
+#define MC_CUT    G(KC_X) 
+#define MC_COPY   G(KC_C) 
+#define MC_PASTE  G(KC_V) 
+
 // #define MOUSEKEY_DELAY       1 
 // #define MOUSEKEY_MOVE_DELTA  10
 // #define MOUSEKEY_INTERVAL    2 
 // #define MOUSEKEY_MAX_SPEED   70
 // #define MOUSEKEY_TIME_TO_MAX 20
-
 
 #define IMEON   KC_LNG1
 #define IMEOFF  KC_LNG2
@@ -37,7 +42,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * `-----------------------------------------------------------'
      */
     [LY_NRML] = LAYOUT_jp(
-        KC_ESC,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,   KC_6,    KC_7,    KC_8,    KC_9,   KC_0,    KC_MINS,  KC_EQL,  KC_INT3, KC_BSPC,
+        KC_ESC,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,   KC_6,    KC_7,    KC_8,    KC_9,   KC_0,    KC_MINS,  KC_EQL,  KC_INT3, S(KC_LBRC),
         LT_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,   KC_Y,    KC_U,    KC_I,    KC_O,   KC_P,    KC_LBRC,  KC_RBRC, // KC_ENT
         KC_LCTL, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,   KC_H,    KC_J,    KC_K,    KC_L,   KC_SCLN, KC_QUOT,  KC_BSLS,  KC_ENT,
         KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,   KC_N,    KC_M,    KC_COMM, KC_DOT, KC_SLSH, KC_INT1,  KC_UP,   KC_RSFT,
@@ -61,7 +66,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_ESC,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_HOME, KC_MINS, KC_EQL,  XXXXXXX, KC_C,
         XXXXXXX, XXXXXXX, XXXXXXX, KC_END,  XXXXXXX, XXXXXXX, XXXXXXX, KC_PGDN, KC_PGUP, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
         KC_LCTL, KC_HOME, KC_SPC,  KC_DEL,  XXXXXXX, XXXXXXX, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_END,  XXXXXXX, XXXXXXX, XXXXXXX,
-        KC_LSFT, KC_UNDO, KC_CUT,  KC_COPY, KC_PASTE, KC_BSPC, KC_ENT,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_UP,   XXXXXXX,
+        KC_LSFT, MC_UNDO, MC_CUT,  MC_COPY, MC_PASTE, KC_BSPC, KC_ENT,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_UP,   XXXXXXX,
         XXXXXXX,  KC_LALT, KC_LGUI, IMEOFF, KC_BSPC,      KC_SPC,      KC_ENT,  IMEON,  KC_RALT, KC_RSFT, KC_LEFT, KC_DOWN, KC_RGHT),
 
 
